@@ -1,0 +1,270 @@
+<html>
+<head>
+<link rel="shortcut icon" href="img/image.jpg">
+<title>TravelParadise</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/navbar.css">
+ <style>
+.rows{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.cols-25 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+
+.cols-50 {
+  -ms-flex: 50%;
+  flex: 50%;
+}
+
+.cols-75 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.cols-25,
+.cols-50,
+.cols-75 {
+  padding: 0 16px;
+}
+
+.containers {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+@media (max-width: 800px) {
+  .rows {
+    flex-direction: column-reverse;
+  }
+  .cols-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+ </head>        
+<body>
+<header id="header">
+<div class="header-top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-6 col-6 header-top-left">
+			  					
+			 </div>
+			 
+        </div>			  					
+    </div>
+</div>
+    <div class="navbar" id="navs">
+            <a href="index.html"> </a>  
+            <ul>
+            <li><a href="index.html">HOME</a> </li>
+            <li> <a href="about.html">ABOUT  </a></li>
+            <li><a href="course.html">COURSES</a> </li>
+            <li> <a href="addon.html">ADD ONS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="register.html">REGISTER</a></li>
+            </ul>
+     </div>
+</header>
+			
+<section class="about-banner relative">
+    <div class="overlay overlay-bg"></div>
+        <div class="container">				
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+				    <h1 class="text-white">
+				        <br>Register			
+				    </h1><br>	
+				        <br>
+				</div>	
+            </div>
+    </div>
+</section>
+<br><br><br><br>  
+<h2>Register </h2>
+<div class="rows">
+  <div class="cols-75">
+    <div class="containers">
+      <form action="http://localhost/insert.php" method="GET">
+      
+        <div class="rows">
+          <div class="cols-50">
+          
+            <label><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="John M. Doe" required>
+             
+            <label><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com" pattern="([A-za-z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,5})"required>
+            <label><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="address" name="address" placeholder="542 W. 15th Street" required>
+            <label><i class="fa fa-graduation-cap"></i>Enter Your Course</label>
+            <input type="text" id="entercourse" name="entercourse" placeholder="Python" required>
+            <label><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York" required>
+            <div class="rows">
+              <div class="cols-50">
+                <label>State</label>
+                <input type="text" id="state" name="state" placeholder="NY" required>
+              </div>
+              <div class="cols-50">
+                <label>Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="cols-50">
+            <h3>Payment</h3>
+            <label>Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="	fa fa-google-wallet" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label>Name on Card</label>
+            <input type="text" id="cardname" name="cardname" placeholder="John More Doe" required>
+            <label>Credit card number</label>
+            <input type="text" id="cardnumber" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+            <label>Exp Month</label>
+            <input type="text" id="expirymonth" name="expirymonth" placeholder="September" required>
+            <div class="rows">
+              <div class="cols-50">
+                <label>Exp Year</label>
+                <input type="text" id="expiryyear" name="expiryyear" placeholder="2018" required>
+              </div>
+              <div class="cols-50">
+                <label>CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352" required>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr" required> I Agree to the Terms and Conditions.
+        </label>
+        <input type="submit" value="Submit" class="btn" formaction="http://localhost/insert.php" method="GET">
+          <input type="submit" value="Update" formaction="http://localhost/update1.php" class="btn" >
+      </form>
+          
+          
+    </div>
+  </div>
+  
+        </div>
+			<footer class="footer-area section-gap">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-lg-3  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About Agency</h6>
+								<p>
+									We offer unique and exclusive experiences. We work directyl with our customers and provide great plans for their holidays.
+                                </p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Navigation Links</h6>
+								<div class="row">
+									<div class="col">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="copy.html">About</a></li>
+											<li><a href="course.html">Courses</a></li>
+											
+										</ul>
+									</div>
+									<div class="col">
+										<ul>
+											<li><a href="addon.html">Add Ons</a></li>
+											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="register.html">Register</a></li>
+											
+										</ul>
+									</div>										
+								</div>							
+							</div>
+						</div>							
+						
+									
+					</div>
+
+					<div class="row footer-bottom d-flex justify-content-between align-items-center">
+						<p class="col-lg-8 col-sm-12 footer-text m-0">
+Copyright &copy; All rights reserved
+						<div class="col-lg-4 col-sm-12 footer-social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+                            <script src="css/javascript.js"></script>
+                </body>
+</html>
